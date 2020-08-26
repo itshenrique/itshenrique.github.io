@@ -67,7 +67,6 @@
       'EXP_TIME',
       date.getFullYear() - new Date('2018-09-01').getFullYear()
     );
-    console.log(aboutMe);
     $('.about-me').text(aboutMe);
   });
 
