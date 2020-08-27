@@ -71,4 +71,22 @@
   });
 
   $('.copyright').text('Copyright © Henrique Pereira ' + date.getFullYear());
+
+  var myHeaders = new Headers();
+
+  var myInit = {
+    method: 'GET',
+    headers: myHeaders,
+    mode: 'cors',
+    cache: 'default',
+  };
+
+  fetch('https://pokeapi.co/api/v2/pokemon/pikachu/', myInit).then(
+    async (response) => {
+      if (response.ok) {
+        let json = await response.json();
+        console.log(json);
+      }
+    }
+  );
 })(jQuery); // End of use strict
